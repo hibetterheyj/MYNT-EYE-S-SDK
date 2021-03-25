@@ -150,7 +150,7 @@ cleanpkg:
 ros: install
 	@$(call echo,Make $@)
 ifeq ($(HOST_OS),Linux)
-	@cd ./wrappers/ros && catkin_make -DCMAKE_BUILD_TYPE=$(BUILD_TYPE)
+	@cd ./wrappers/ros && catkin_make -DCMAKE_BUILD_TYPE=$(BUILD_TYPE) -DOpenCV_DIR=/home/lis/opencv-3.4.5/build/installed/share/OpenCV/OpenCVConfig.cmake
 else
 	$(error "Can't make ros on $(HOST_OS)")
 endif

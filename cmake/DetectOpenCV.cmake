@@ -15,10 +15,11 @@
 include(${CMAKE_CURRENT_LIST_DIR}/IncludeGuard.cmake)
 cmake_include_guard()
 
+set(OpenCV_DIR "/home/lis/opencv-3.4.5/build/installed/share/OpenCV")
 if(OpenCV_FIND_QUIET)
   find_package(OpenCV QUIET)
 else()
-  find_package(OpenCV REQUIRED)
+  find_package(OpenCV 3.4.5 REQUIRED)
 endif()
 
 if(OpenCV_FOUND)

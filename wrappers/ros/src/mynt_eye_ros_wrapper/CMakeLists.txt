@@ -14,6 +14,7 @@
 
 cmake_minimum_required(VERSION 2.8.3)
 project(mynt_eye_ros_wrapper)
+set(OpenCV_DIR "/home/lis/opencv-3.4.5/build/installed/share/OpenCV")
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
